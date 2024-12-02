@@ -3,6 +3,10 @@ import numpy as np
 def read_txt_file_lines(filename='input.txt', read_arg='r'):
     with open(filename, read_arg) as f:
         return [line.strip() for line in f.readlines()]
+
+def read_txt_file_lines_ints(filename='input.txt', read_arg='r'):
+    with open(filename, read_arg) as f:
+        return [[int(x) for x in line.split()] for line in f.readlines()]
     
 def read_txt_file_without_escape(filename='input.txt', read_arg='r'):
     with open(filename, read_arg) as f:
