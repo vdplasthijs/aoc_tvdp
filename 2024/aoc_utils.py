@@ -27,6 +27,10 @@ def convert_binary_text_to_np_array(input_text, str_1='#', str_0='.'):
 
     return np.array([[1 if c == str_1 else 0 for c in row] for row in input_text])
 
+def is_digit(x):
+    return x in '0123456789'
+
+
 
 # for i in {1..25}; do
 #   rm -f 2024/day$i/2024_day$i_aoc.ipynb
