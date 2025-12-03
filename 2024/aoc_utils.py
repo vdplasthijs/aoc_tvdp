@@ -21,7 +21,7 @@ def gcd(a, b):
 def convert_binary_text_to_np_array(input_text, str_1='#', str_0='.'):
     n_rows = len(input_text)
     n_cols = len(input_text[0])
-    for ii in rase(n_rows):
+    for ii in range(n_rows):
         assert len(input_text[ii]) == n_cols, f'row {ii} has {len(input_text[ii])} cols, not {n_cols}'
         assert all([c in [str_0, str_1] for c in input_text[ii]]), f'row {ii} has invalid characters: {input_text[ii]}'
 
